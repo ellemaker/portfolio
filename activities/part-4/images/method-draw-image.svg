@@ -1,0 +1,23 @@
+<svg width="830" height="800" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient y2="101.718%" y1="2.476%" x2="10.913%" x1="95.861%" id="a">
+   <stop stop-color="#FFF1F1" offset="0%"/>
+   <stop stop-color="#FFF" offset="100%"/>
+  </linearGradient>
+  <linearGradient y2="101.718%" y1="2.476%" x2="10.848%" x1="95.937%" id="b">
+   <stop stop-color="#FFF1F1" offset="0%"/>
+   <stop stop-color="#FFF" offset="100%"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g transform="rotate(179.9373321533203 415,400) " id="svg_1" fill-rule="evenodd" fill="none">
+   <path id="svg_2" transform="rotate(180 394,400) " d="m0,800c48.557,-184.991 167.048,-301.57 355.473,-349.737c188.425,-48.167 332.601,-198.255 432.527,-450.263l0,800l-788,0z" fill="url(#a)"/>
+   <path id="svg_3" d="m413,800c25.696,-97.814 88.4,-159.455 188.112,-184.924c99.712,-25.468 176.008,-104.826 228.888,-238.076l0,423l-417,0z" fill="url(#b)"/>
+  </g>
+ </g>
+</svg>

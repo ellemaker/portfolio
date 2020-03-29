@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
+    <style>
+        *, *:before, *:after{ box-sizing: border-box; }
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        button{cursor: pointer;}
+        main{
+            display: flex;
+            flex-wrap: wrap;
+            height: 100vh;
+        }
+        main .content{ 
+            background-image: url(images/bg-pattern-desktop.svg);
+            background-color: #fff9f9;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 60%; 
+            height: 100%;
+            position: relative;
+        }
+        main .featured{ 
+            background-image: url(images/hero-desktop.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 40%;
+
+        }
+        main .content .holder{
+            width: 450px;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform:translate(-50%, -50%);
+        }
+        main .content .logo{
+            width: 440px;
+            margin: 60px auto 100px;
+        }
+        h1{
+            text-transform: uppercase;
+            color: hsl(0, 6%, 24%);
+            letter-spacing: 0.25em;
+            font-size: 60px;
+            line-height: 1.2em;
+        }
+        h1 span{
+            font-weight: 300;
+            color: hsl(0, 36%, 70%);
+        }
+        p{
+            color: hsl(0, 36%, 70%);
+            font-size: 18px;
+            line-height: 2em;
+            margin-bottom: 0.67em;;
+        }
+        main .content form{
+            margin: 50px 0;
+        }
+        .email-control{
+            width: 100%;
+            border: 1px solid hsl(0, 36%, 70%);
+            font-size: 18px;
+            padding:15px 25px;
+            border-radius: 50px;
+            background: #fff9f9;
+            margin-bottom: 5px;
+
+        }
+        .email-control:focus{
+            outline: none;
+        }
+        .subscribe-form{
+            position: relative;
+        }
+        .subscribe-form button{
+            width: 100px;
+            background: linear-gradient(135deg, hsl(0, 80%, 86%) 0, hsl(0, 74%, 74%) 100%);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            font-size: 18px;
+            padding:15px 25px;
+            border-radius: 50px;
+            border:0;
+            position: absolute;
+            top: -1px;
+            right: 0;
+            transition: 0.4s linear all;
+        }
+        .subscribe-form button:hover{
+             background: linear-gradient(135deg, hsl(0, 80%, 86%) 100%, hsl(0, 74%, 74%) 100%);
+        }
+        .subscribe-form button:focus{
+            outline: none;
+        }
+        .subscribe-form span.error-text{
+            margin-left: 25px;
+            margin-top: 5px;
+            display: none;
+            color: hsl(0, 93%, 68%);
+        }
+        .subscribe-form.error .email-control{
+            border-color: hsl(0, 93%, 68%);
+        }
+        .subscribe-form.error span.error-text{
+            display: block;
+        }
+        .subscribe-form.error .error-icon{
+            display: inline;
+        }
+        .subscribe-form .error-icon{
+            position: absolute;
+            top: 50%;
+            right: 110px;
+            transform:translateY(-50%);
+            display: none;
+        }
+        .form-row{position: relative;}
+
+        .mobile-featured{display: none;}
+
+        ::-webkit-input-placeholder { 
+            color:hsl(0, 36%, 70%);
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        :-moz-placeholder { 
+           color:hsl(0, 36%, 70%);
+           font-family: 'Josefin Sans', sans-serif;
+        }
+        ::-moz-placeholder { 
+           color:hsl(0, 36%, 70%);
+           font-family: 'Josefin Sans', sans-serif;
+        }
+        :-ms-input-placeholder { 
+           color:hsl(0, 36%, 70%);
+           font-family: 'Josefin Sans', sans-serif;
+        }
+        ::-ms-input-placeholder { 
+           color:hsl(0, 36%, 70%);
+           font-family: 'Josefin Sans', sans-serif;
+        }
+
+        ::placeholder { 
+           color:hsl(0, 36%, 70%);
+           font-family: 'Josefin Sans', sans-serif;
+        }
+
+
+        @media screen and (max-width: 994px) {
+            main{height: auto;}
+            main .content, main .featured{width: 100%;}
+            main .content .logo{
+                margin: 30px 50px;
+            }
+            main .featured{
+                display: none;            
+            }
+            main .content .holder{
+                position: initial;
+                top: initial;
+                left: initial;
+                transform: translate(0,0);
+            }
+            .mobile-featured{
+                display: block;
+                position: relative;
+            }
+            .mobile-featured:before{
+                content: '';
+                padding-top: 56.25%;
+                display: block;
+            }
+            .mobile-featured img{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+            main .content .holder{
+                margin: 0 auto;
+                text-align: center;
+            }
+
+        }
+
+        @media screen and (max-width: 767px) {
+            h1{
+                font-size: 40px;
+            }
+            main .content .holder,
+            main .content .logo{
+                width: 100%;
+            }
+            main .content .holder{
+                padding: 0 30px;
+            }
+            main .content .logo{
+                margin: 0;
+                padding: 30px;
+            }
+        }
+
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+    <main>
+        
+        <div class="content">
+            <div class="logo">
+                <img src="images/logo.svg" alt="logo">
+            </div>
+
+            <div class="mobile-featured">
+                <img src="images/hero-mobile.jpg" alt="hero mobile">
+            </div>
+
+            <div class="holder">
+                
+                <h1>
+                    <span>we're</span>
+                    coming soon
+                </h1>
+                <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+                <form action="" class="subscribe-form" novalidate>
+                    <div class="form-row">
+                        <input type="email" name="email" class="email-control" placeholder="Email Address">
+                        <div class="error-icon">
+                            <img src="images/icon-error.svg" alt="icon error">
+                        </div>
+                    </div>
+                    
+                    <span class="error-text">Please provide a valid email</span>
+                    
+                    <button>
+                        <img src="images/icon-arrow.svg" alt="arrow">
+                    </button>
+                </form>
+            </div>
+            
+        </div>
+        <div class="featured">
+        </div>
+    </main>
+
+
+    <script>
+        function validateEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+        $(function(){
+            $('.subscribe-form').on('submit', function(e){
+                e.preventDefault();
+                var getEmail = $(this).find('[name=email]').val();
+
+                if (!validateEmail(getEmail)) {
+                    $(this).addClass('error');
+                }
+            })
+        });
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/reset.css">
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
+            background-position: top right, bottom left;
+            background-repeat: no-repeat;
+            /*background: linear-gradient(135deg, hsl(236, 72%, 79%) 8%,  hsl(237, 63%, 64%) 100%);*/
+            background-color: hsl(240, 78%, 98%);
+            font-size: 15px;
+            height: 100vh;
+            color: hsl(233, 13%, 49%);
+        }
+        main{
+            width: 1190px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1{
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        .pricing-table {
+            display: flex;
+            flex-wrap: wrap;
+            /* align-items: center; */
+            margin-top: 100px;
+        }
+        .pricing-table .card{
+            flex: 1 1 0;
+            background: #fff;
+            padding: 50px 20px;
+            font-weight: bold
+        }
+        .pricing-table .card:first-child{
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+        }
+        .pricing-table .card:nth-child(2){
+            background: linear-gradient(135deg, hsl(236, 72%, 79%) 8%,  hsl(237, 63%, 64%) 100%);
+            margin: -20px 0;
+            padding: 70px 20px;
+            border-radius: 10px;
+            color: #fff;
+        }
+        .pricing-table .card:last-child{
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+        }
+        .pricing-table .card:first-child .btn-link,
+        .pricing-table .card:last-child .btn-link{
+            
+            color: #fff;
+            
+            
+            background: linear-gradient(135deg, hsl(236, 72%, 79%) 8%,  hsl(237, 63%, 64%) 100%);
+        }
+
+        .pricing-table .btn-link{
+            padding: 15px 0;
+            margin-top: 30px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            color: hsl(232, 13%, 33%);
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            text-align: center;
+            background: #fff;
+        }
+
+        .card .type-name{
+            font-size: 20px;
+            display: block;
+        }
+        .card .price{
+            font-size: 60px;
+            line-height: 1.2em;
+            vertical-align: middle;
+            margin: 30px 0;
+        }
+        .card .price span{
+            font-size: 35px;
+            vertical-align: middle;
+            line-height: 60px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .main input:checked ~ .pricing-table{
+            background: #000;
+        }
+        .switcher{
+            width: 300px;
+            text-align: center;
+            margin:0 auto;
+        }
+        .switcher label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            cursor: pointer;
+        }
+        .switcher label span{
+            display: inline-block;
+            margin:0 15px;
+        }
+        .switcher .switch input{
+            display: none;
+        }
+        .switcher .switch{
+            width: 70px;
+            height: 35px;
+            background: linear-gradient(135deg, hsl(236, 72%, 79%) 8%,  hsl(237, 63%, 64%) 100%);
+            border-radius: 75px;
+            position: relative;
+        }
+        .switcher .switch .circle{
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 50%;
+            left: 5px;
+            right: initial;
+            transform: translateY(-50%);
+            background: #fff;
+            border-radius: 100%;
+            transition: 0.4s linear all;
+        }
+
+        .switcher .switch input:checked + .circle{
+            left: calc(100% - 35px);
+        }
+
+        .pricing-table .price .annually-price{
+            display: none;
+        }
+        .type-spec{border-bottom:1px solid hsl(234, 14%, 74%);}
+        .type-spec li{
+            display: block;
+            text-align: center;
+            border-top:1px solid hsl(234, 14%, 74%);
+            font-size: 16px;
+            padding: 18px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <main>
+        <h1>Our Pricing</h1>
+
+        <div class="switcher">
+            <label for="type">
+                <span>Annually</span>
+                <div class="switch">
+                    <input type="checkbox" name="type" id="type" checked>
+                    <div class="circle"></div>
+                </div>
+                <span>Monthly</span>
+            </label>
+        </div>
+
+        <div class="pricing-table monthly-type">
+            <div class="card">
+                <div class="card-header">
+                    <span class="type-name">Basic</span>
+                    <div class="price">
+                        <div class="montly-price"><span>$</span>19.99</div>
+                        <div class="annually-price"><span>$</span>199.99</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="type-spec">
+                        <li>500 GB Storage</li>
+                        <li>2 Users Allowed</li>
+                        <li>Send up to 3 GB</li>
+                    </ul>
+                    <a class="btn-link" href="">learn more</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <span class="type-name">Professional</span>
+                    <div class="price">
+                        <div class="montly-price"><span>$</span>24.99</div>
+                        <div class="annually-price"><span>$</span>249.99</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="type-spec">
+                        <li>1 TB Storage</li>
+                        <li>5 Users Allowed</li>
+                        <li>Send up to 10 GB</li>
+                    </ul>
+                    <a class="btn-link" href="">learn more</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <span class="type-name">Master</span>
+                    <div class="price">
+                        <div class="montly-price"><span>$</span>39.99</div>
+                        <div class="annually-price"><span>$</span>399.99</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="type-spec">
+                        <li>2 TB Storage</li>
+                        <li>10 Users Allowed</li>
+                        <li>Send up to 20 GB</li>
+                    </ul>
+                    <a class="btn-link" href="">learn more</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
