@@ -9,6 +9,9 @@
     <title>Frontend Mentor | Insure landing page</title>
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all">
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all">
     <link rel="stylesheet" href="../assets/reset.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -17,12 +20,12 @@
 
     <header>
         <div class="container">
-            <div class="flex">
+            <div class="flex flex-item-center">
                 <div class="logo">
-                    <img src="images/logo.svg" alt="">
+                    <a href="/"><img src="images/logo.svg" alt=""></a>
                 </div>
                 <nav>
-                    <ul class="flex">
+                    <ul class="flex flex-item-center">
                         <li><a href="#">how we work</a></li>
                         <li><a href="#">blog</a></li>
                         <li><a href="#">account</a></li>
@@ -54,6 +57,9 @@
     </section>
 
     <section class="section-features">
+        <div class="pattern-left-top">
+            <img src="images/bg-pattern-intro-left-desktop.svg" alt="pattern" title="pattern">
+        </div>
         <div class="container">
             <div class="line line-dark"></div>
             <h2>We're different</h2>
@@ -99,11 +105,11 @@
     <section>
         <div class="container">
             <div class="flag-intro flex flex-item-center">
-                <div class="mr-auto w-half">
-                    <h3>Find out more about how we work</h3>
+                <div class="flex-1 w-3-4">
+                    <h3>Find out more <br>  about how we work</h3>
                 </div>
                 <div>
-                    <a href="#">How we work</a>
+                    <a href="#" class="btn-link">How we work</a>
                 </div>
             </div>
         </div>
@@ -117,16 +123,16 @@
                 </div>
                 <div class="social-media">
                     <ul class="flex">
-                        <li><a href="#">facebook</a></li>
-                        <li><a href="#">twitter</a></li>
-                        <li><a href="#">pinterest</a></li>
-                        <li><a href="#">instagram</a></li>
+                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
             <div class="bottom">
-                <div class="card-lists">
-                    <div class="card">
+                <div class="card-lists flex">
+                    <div class="card w-1-4">
                         <div class="card-header">Our Company</div>
                         <div class="card-body">
                             <ul>
@@ -137,7 +143,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card w-1-4">
                         <div class="card-header">Help Me</div>
                         <div class="card-body">
                             <ul>
@@ -148,7 +154,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card w-1-4">
                         <div class="card-header">Contact</div>
                         <div class="card-body">
                             <ul>
@@ -158,7 +164,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card w-1-4">
                         <div class="card-header">Others</div>
                         <div class="card-body">
                             <ul>
