@@ -24,9 +24,7 @@ ul li{
 ul li:nth-child(even){background: #f7fafc;}
 ul li + li{border-top: 1px solid #d9e1e6;}
 ul li a{text-decoration: none;}
-strong{
-	font-weight: 700
-}
+strong{font-weight: 700; font-size: 14px;}
 .logo{display: none;}
 
 
@@ -41,6 +39,10 @@ strong{
 	border-radius: 0.375rem;
 	margin: 20px 0;
 }
+
+.text-yellow{color: #F6E05E;}
+.text-red{color: #E53E3E;}
+.text-green{color: #48BB78;}
 
 
 @media screen and (max-width: 560px) {
