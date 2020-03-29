@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/reset.css">
     <style>
+        *, :after, :before {
+            box-sizing: border-box;
+        }
         body{
             padding: 0;
             margin: 0;
@@ -25,13 +28,14 @@
         }
         main{
             width: 1190px;
-            margin: 0 auto;
+            margin: 100px auto 0;
             text-align: center;
         }
 
         h1{
             font-size: 3em;
             font-weight: bold;
+            margin-bottom: 30px;
         }
 
         .pricing-table {
@@ -41,10 +45,11 @@
             margin-top: 100px;
         }
         .pricing-table .card{
-            flex: 1 1 0;
+            width: 33.3333%;
             background: #fff;
             padding: 50px 20px;
-            font-weight: bold
+            font-weight: bold;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
         .pricing-table .card:first-child{
             border-top-left-radius: 10px;
@@ -65,11 +70,15 @@
         }
         .pricing-table .card:first-child .btn-link,
         .pricing-table .card:last-child .btn-link{
-            
             color: #fff;
-            
-            
             background: linear-gradient(135deg, hsl(236, 72%, 79%) 8%,  hsl(237, 63%, 64%) 100%);
+           
+        }
+        .pricing-table .card:first-child .btn-link:hover,
+        .pricing-table .card:last-child .btn-link:hover{
+            border: 1px solid hsl(233, 13%, 49%);
+            color: hsl(233, 13%, 49%);
+            background: #fff;
         }
 
         .pricing-table .btn-link{
@@ -83,6 +92,12 @@
             font-size: 16px;
             text-align: center;
             background: #fff;
+             transition: 0.4s linear background;
+        }
+        .pricing-table .btn-link:hover{
+            border: 1px solid #fff;
+            color: #fff;
+            background: transparent;
         }
 
         .card .type-name{
@@ -110,6 +125,9 @@
             width: 300px;
             text-align: center;
             margin:0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .switcher label{
             display: flex;
@@ -117,6 +135,7 @@
             align-items: center;
             margin: 20px auto;
             cursor: pointer;
+            font-weight: 700;
         }
         .switcher label span{
             display: inline-block;
@@ -138,7 +157,6 @@
             width: 30px;
             height: 30px;
             top: 50%;
-            left: 5px;
             right: initial;
             transform: translateY(-50%);
             background: #fff;
@@ -146,11 +164,14 @@
             transition: 0.4s linear all;
         }
 
-        .switcher .switch input:checked + .circle{
+        .controlpay_yearly:checked ~ .switcher .circle{
+            left: 5px;
+        }
+        .controlpay_month:checked ~ .switcher .circle{
             left: calc(100% - 35px);
         }
 
-        .pricing-table .price .annually-price{
+        .monthly-type .annually-price{
             display: none;
         }
         .type-spec{border-bottom:1px solid hsl(234, 14%, 74%);}
@@ -162,6 +183,31 @@
             padding: 18px 0;
         }
 
+        .controlpay_month:checked ~ .pricing-table .montly-price{display: block}
+        .controlpay_month:checked ~ .pricing-table .annually-price{display: none}
+
+        .controlpay_yearly:checked ~ .pricing-table .montly-price{display: none}
+        .controlpay_yearly:checked ~ .pricing-table .annually-price{display: block}
+
+        .hidden{
+            display: none;
+        }
+
+        @media screen and (min-width: 992px) and (max-width: 1200px) {
+            main{width: 960px;}
+        }
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            main{width: 720px;}
+            .card .price{font-size: 40px;}
+        }
+        @media screen and (max-width: 767px) {
+            main{width: 100%; padding: 0 15px;}
+            .pricing-table{margin-bottom: 100px;}
+            .pricing-table .card{width: 100%; border-radius: 10px;}
+            .pricing-table .card:nth-child(2){margin-top: 0; margin-bottom: 0;}
+            .pricing-table .card + .card{margin-top: 50px;}
+        }
+
     </style>
 </head>
 <body>
@@ -170,16 +216,19 @@
     <main>
         <h1>Our Pricing</h1>
 
+        <input type="radio" class="controlpay_yearly hidden" name="typepay" id="annually">
+        <input type="radio" class="controlpay_month hidden" name="typepay" id="monthly" checked>
+
         <div class="switcher">
-            <label for="type">
-                <span>Annually</span>
-                <div class="switch">
-                    <input type="checkbox" name="type" id="type" checked>
-                    <div class="circle"></div>
-                </div>
-                <span>Monthly</span>
-            </label>
+            <label for="annually">Annually</label>
+            
+            <div class="switch">
+                <div class="circle"></div>
+            </div>
+            <label for="monthly">Monthly</label>
         </div>
+
+        
 
         <div class="pricing-table monthly-type">
             <div class="card">
