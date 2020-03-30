@@ -1,0 +1,9 @@
+*, :after, :before {
+    box-sizing: border-box;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+	background-color: hsl(218, 28%, 13%);
+	font-size: 14px;
+	color: hsl(0, 0%, 100%);
+}
