@@ -81,6 +81,9 @@ p{
 }
 header {
 	padding:30px 0;
+	z-index: 30;
+	position: relative;
+	background-color: #fff;
 }
 header .logo{
 	margin-right: auto;
@@ -120,7 +123,9 @@ header nav a:hover{
 	position: relative;
 	padding: 100px 0 0;
 }
-
+.banner .content{
+	position: relative;
+}
 .banner .content h1{
 	margin: 50px 0;
 	font-weight: normal;
@@ -138,26 +143,29 @@ header nav a:hover{
 	top: 0;
 	right: 15px;
 	margin-left: 20px;
+	max-width: 50%;
 }
 .banner .featured img{
 	width: 100%;
+
 }
 .banner .pattern-right-top{
 	position: absolute;
 	top: 0;
 	right: 0;
 }
+.banner .pattern-left-top{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: translateY(50%);
+}
+.banner .pattern-mobile-left{display:none;}
 
 .section-features{
 	padding: 200px 0 0;
 	color: hsl(270, 9%, 17%);
 	position: relative;
-}
-.section-features .pattern-left-top{
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: translateY(-50%);
 }
 .section-features h2{
 	margin: 50px 0;
@@ -170,7 +178,7 @@ header nav a:hover{
 }
 .card .card-title{
 	font-family: 'DM Serif Display', serif;
-	font-size: 24px;
+	font-size: 30px;
 	margin: 30px 0;
 }
 
@@ -234,16 +242,96 @@ footer .card .card-body li a{
 footer .card .card-body li a:hover{
 	text-decoration: underline;
 }
+.navbar{display: none}
 
- @media screen and (min-width: 992px) and (max-width: 1200px) {
+.navbar .navbar-close{display: none;}
+.navbar .navbar-open{display: block;}
+
+.navbar.navbar-opened .navbar-close{display: block;}
+.navbar.navbar-opened .navbar-open{display: none;}
+
+.mobile-nav{
+	position: absolute;
+    top: 92px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 92px);
+    z-index: 20;
+    transform: translateY(-120%);
+    transition: 0.4s linear transform;
+    background-image: url(../images/bg-pattern-mobile-nav.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    background-color: hsl(270, 9%, 17%);
+}
+.mobile-nav.open{
+	transform: translateY(0);
+}
+
+.mobile-nav ul{
+	margin: 50px;
+	text-align: center;
+}
+.mobile-nav ul li + li{
+	margin-top: 50px;
+}
+.mobile-nav ul a{
+	font-size: 24px;
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.mobile-nav ul li:last-child a{
+	border:2px solid #fff;
+	padding: 10px 15px;
+	display: block;
+	color: #fff;
+	transition: 0.4s linear background;
+}
+
+@media screen and (max-width: 1200px) {
     .container{width: 960px;}
+    .tab-h-flex{display: flex; flex-wrap: wrap;}
+    .banner{padding-bottom: 100px;}
+    .banner .featured {position: relative; top: initial; right: initial; margin-left: 0; padding-left: 15px;}
+    .banner .content h1{font-size: 60px;}
 }
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (max-width: 991px) {
     .container{width: 720px;}
+    .banner .featured {position: relative; top: initial; right: initial; margin-left: 0; padding-left: 15px;}
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .container{width: 540px;}
+    .banner{padding:0;}
+    .banner .featured{order:1; padding-left: 0; max-width: initial; position: relative; overflow: hidden; margin:0 calc(-50vw + 50%); width: 100vw;}
+    .banner .featured:before{content: ''; display: block; padding-top: 56.25%; }
+    .banner .featured img{position: absolute; width: 100%; top: 50%; left: 0; transform: translateY(-50%);}
+    .banner .content{order:2;}
+    .banner .content{width: 100%; text-align: center;}
+    .banner .line{display: none;}
+    .banner .pattern-right-top{ top: 100%; transform: translateY(-50%);}
+    .banner .pattern-left-top{display: none;}
+    .banner .pattern-mobile-left{display:block; position: absolute; top: 0; left: calc(-50vw + 50%);}
+    .line{margin:0 auto;}
+    .section-features{text-align: center; padding:100px 0;}
+    .section-features .card-lists .w-1-3{width: 100%;}
+    .section-features .card-lists .card{padding:0 50px;}
+    .section-features .card-lists .card + .card{margin-top: 70px;}
+    .flag-intro{text-align: center; justify-content: center; background-image: url(../images/bg-pattern-how-we-work-mobile.svg);}
+    .flag-intro .btn-link{margin:20px 0;}
+    footer .bottom .w-1-4{width: 50%;}
+    header nav ul.flex{display: none;}
+    .navbar{display: block}
 }
 @media screen and (max-width: 575px) {
     .container{width: 100%;}
+    footer{background-image: url(../images/bg-pattern-footer-mobile.svg); padding: 30px 0;}
+    footer .bottom .w-1-4{width: 100%;}
+    footer .bottom .card{text-align: center;}
+    footer .bottom .card + .card{margin-top: 50px;}
+    footer .top{padding-bottom: 0;}
+    footer .top > div{width: 100%; margin-bottom: 30px; text-align: center;}
+    footer .top .social-media ul{justify-content: center;}
 }
