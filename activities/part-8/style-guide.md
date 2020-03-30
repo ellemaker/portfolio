@@ -11,22 +11,40 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Desaturated Dark Cyan: hsl(180, 29%, 50%)
+- Dark Blue (intro and email sign up background): hsl(217, 28%, 15%)
+- Dark Blue (main background): hsl(218, 28%, 13%)
+- Dark Blue (footer background): hsl(216, 53%, 9%)
+- Dark Blue (testimonials background): hsl(219, 30%, 18%)
+
+### Accent
+
+- Cyan (inside call-to-action gradient): hsl(176, 68%, 64%)
+- Blue (inside call-to-action gradient): hsl(198, 60%, 50%)
 
 ### Neutral
 
-- Light Grayish Cyan (Background): hsl(180, 52%, 96%)
-- Light Grayish Cyan (Filter Tablets): hsl(180, 31%, 95%)
-- Dark Grayish Cyan: hsl(180, 8%, 52%)
-- Very Dark Grayish Cyan: hsl(180, 14%, 20%)
+- White: hsl(0, 0%, 100%)
 
 ## Typography
 
 ### Body Copy
 
-- Font size: 15px
+- Font size: 14px
 
-### Headings
+### Headings, Call-to-actions, Header Navigation
 
-- Family: [Spartan](https://fonts.google.com/specimen/Spartan)
-- Weights: 500, 700
+- Family: [Raleway](https://fonts.google.com/specimen/Raleway)
+- Weights: 400, 700
+
+### Body
+
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400, 700
+
+## Icons
+
+For the social icons, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com/)
+- [IcoMoon](https://icomoon.io/)
+- [Ionicons](https://ionicons.com/)
