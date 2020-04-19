@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Rebuilding Mynimo with Tailwind</title>
+
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="font-sans p-10">
+	
+	<header class="flex items-center">
+		<div class="flex items-center">
+			<img src="images/main-logo.svg" alt="mynimo" title="mynimo" class="w-32">
+			<div class="pl-2 ml-2 border-l border-gray-500">
+				<span class="text-sm block leading-none">CEBU</span>
+				<a href="#" class="block text-xs text-blue-500">Change Location</a>
+			</div>
+		</div>
+		<nav class="flex items-center ml-auto text-gray-700">
+			<a href="#" class="mx-3 px-3 py-2 font-medium hover:bg-gray-200">Post a Resume</a>
+			<a href="#" class="mx-3 px-3 py-2 font-medium hover:bg-gray-200">Login</a>
+			<a href="#" class="mx-3 px-5 py-2 font-medium bg-orange-500 hover:bg-orange-600 text-white  rounded-md">Receive Job Alert</a>
+			<a href="#" class="mx-3 px-5 py-2 font-medium border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white rounded-md">Post a Job</a>
+		</nav>
+	</header>
+
+	<main>
+		<div class="adrotator my-8 w-1/3 mx-auto bg-gray-200 h-24"></div>
+
+
+		<div class="flex flex-wrap">
+			<div class="flex flex-wrap items-center">
+				<a class="mr-8 pb-3 font-medium border-b-2 border-orange-500 text-orange-500" href="#">Cebu Jobs</a>
+				<a class="mr-8 pb-3 font-medium text-gray-500 border-b-2 border-transparent hover:text-orange-500 hover:border-orange-500" href="#">Management Jobs</a>
+				<a class="mr-8 pb-3 font-medium text-gray-500 border-b-2 border-transparent hover:text-orange-500 hover:border-orange-500" href="#">Overseas Jobs</a>
+				<a class="mr-8 pb-3 font-medium text-gray-500 border-b-2 border-transparent hover:text-orange-500 hover:border-orange-500" href="#">High Schools Grads</a>
+				<a class="mr-8 pb-3 font-medium text-gray-500 border-b-2 border-transparent hover:text-orange-500 hover:border-orange-500" href="#">Part Time Jobs</a>
+			</div>
+
+			<div class="ml-auto">
+				<button class="bg-gray-200 text-gray-600 mx-3 px-8 py-1 font-semibold text-sm rounded-md flex items-center">
+					<svg fill="currentColor" viewBox="0 0 20 20" class="w-4 h-4"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+					<span class="ml-2">Search</span>
+				</button>
+			</div>
+		</div>
+
+
+		<div class="py-3 bg-gray-200 border-t border-b -mx-10 border-gray-500">
+			<div class="flex justify-center items-center">
+				<input type="text" placeholder="Cebu" class="border border-gray-500 text-sm rounded-md mx-2 px-2 py-2 text-black w-56 outline-none">
+				<select name="" id="" class="border border-gray-500 text-sm rounded-md mx-2 px-2 py-2 text-black w-56 outline-none">
+					<option value="">Cebu Jobs</option>
+				</select>
+				<select name="" id="" class="border border-gray-500 text-sm rounded-md mx-2 px-2 py-2 text-black w-56 outline-none">
+					<option value="">All Categories</option>
+				</select>
+				<button class="mx-2 px-5 py-2 bg-orange-500 text-white rounded-md text-sm hover:bg-orange-600">Search</button>
+				<button class="mx-2 px-5 py-2 bg-gray-400 text-gray-800 rounded-md text-sm">Search Job Titles Only</button>
+			</div>
+		</div>
+
+		<div class="flex pt-8">
+			<div class="w-64">
+				<h3 class="font-semibold text-gray-800 my-3 text-lg">Job Category</h3>
+				<ul class="mb-8">
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+				</ul>
+
+				<h3 class="font-semibold text-gray-800 my-3 text-lg">Job Category</h3>
+				<ul class="mb-8">
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+					<li class="mb-2 capitalize"><a href="#" class="text-blue-500 hover:underline">item list</a> <span class="text-gray-600 text-sm">(100)</span></li>
+				</ul>
+			</div>
+
+			<div class="flex-grow">
+
+				<div class="flex items-center">
+					<h1 class="font-semibold text-gray-800 my-3 text-xl">Job Hiring in Cebu City, Cebu</h1>
+
+					<div class="ml-auto flex items-center">
+						<span class="text-sm">Showing 1 - 50 of 1555</span>
+						<ul class="flex ml-3">
+							<li class="border-l border-gray-800 px-3 py-1 bg-gray-200"><a href="#">1</a></li>
+							<li class="border-l border-gray-800 px-3 py-1 hover:bg-gray-200"><a href="#">2</a></li>
+							<li class="border-l border-gray-800 px-3 py-1 hover:bg-gray-200"><a href="#">3</a></li>
+							<li class="border-l border-gray-800 px-3 py-1 hover:bg-gray-200"><a href="#">4</a></li>
+							<li class="border-l border-gray-800 px-3 py-1 hover:bg-gray-200"><a href="#">5</a></li>
+							<li class="border-l border-gray-800 px-2 py-1 hover:bg-gray-200">
+								<a href="#"><svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-gray-800"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="mt-10 mb-5">
+					<div class="table-header flex flex-wrap">
+						<div class="w-2/5 px-3 font-medium">Position</div>
+						<div class="w-1/5 px-3 font-medium">Company</div>
+						<div class="w-1/5 px-3 font-medium">Location</div>
+						<div class="w-1/5 px-3 font-medium">Date</div>
+					</div>
+				</div>
+
+				<div class="">
+					
+					<div class="shadow rounded-md p-3 mt-5 transition duration-500 ease-in-out hover:shadow-md bg-green-200">
+						<div class=" flex flex-wrap -mx-3">
+							<div class="w-2/5 px-3 font-medium">
+								<h4 class="text-blue-500">
+									<a href="#" class="hover:underline">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+								</h4>
+								<ul>
+									<li class="flex items-center text-sm">
+										<span class="inline-block w-4 h-4 bg-orange-500 rounded-full"></span>
+										<span class="inline-block ml-1">No Experience</span>
+									</li>
+									<li class="flex items-center text-sm">
+										<span class="inline-block w-4 h-4 bg-yellow-500 rounded-full"></span>
+										<span class="inline-block ml-1">High School</span>
+									</li>
+									
+								</ul>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<div class="flex items-start">
+									<div>
+										<div class="bg-green-400 text-white rounded-full mt-1">
+											<svg fill="currentColor" viewBox="0 0 20 20" class="w-4 h-4"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+										</div>
+									</div>
+									<div class="ml-2 leading-tight"><a href="#">Company Name - Lorem ipsum dolor sit amet.</a></div>
+								</div>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<span>Location</span>
+								<p class="text-xs font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<span>Featured</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="shadow rounded-md p-3 mt-5 transition duration-500 ease-in-out hover:shadow-md bg-green-200">
+						<div class=" flex flex-wrap -mx-3">
+							<div class="w-2/5 px-3 font-medium">
+								<h4 class="text-blue-500">
+									<a href="#" class="hover:underline">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+								</h4>
+								<ul>
+									<li class="flex items-center text-sm">
+										<span class="inline-block w-4 h-4 bg-orange-500 rounded-full"></span>
+										<span class="inline-block ml-1">No Experience</span>
+									</li>
+									<li class="flex items-center text-sm">
+										<span class="inline-block w-4 h-4 bg-yellow-500 rounded-full"></span>
+										<span class="inline-block ml-1">High School</span>
+									</li>
+									
+								</ul>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<div class="flex items-start">
+									<div>
+										<div class="bg-green-400 text-white rounded-full mt-1">
+											<svg fill="currentColor" viewBox="0 0 20 20" class="w-4 h-4"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+										</div>
+									</div>
+									<div class="ml-2 leading-tight"><a href="#">Company Name - Lorem ipsum dolor sit amet.</a></div>
+								</div>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<span>Location</span>
+								<p class="text-xs font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<span>Featured</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="shadow rounded-md p-3 mt-5 transition duration-500 ease-in-out hover:shadow-md bg-yellow-200">
+						<div class=" flex flex-wrap -mx-3">
+							<div class="w-2/5 px-3 font-medium">
+								<h4 class="text-blue-500">
+									<a href="#" class="hover:underline">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+								</h4>
+								<ul>
+									<li class="flex items-center text-sm">
+										<span class="inline-block w-4 h-4 bg-orange-500 rounded-full"></span>
+										<span class="inline-block ml-1">No Experience</span>
+									</li>
+									<li class="flex items-center text-sm">
+										<span class="inline-block w-4 h-4 bg-yellow-500 rounded-full"></span>
+										<span class="inline-block ml-1">High School</span>
+									</li>
+									
+								</ul>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<div class="flex items-start">
+									<div>
+										<div class="bg-green-400 text-white rounded-full mt-1">
+											<svg fill="currentColor" viewBox="0 0 20 20" class="w-4 h-4"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+										</div>
+									</div>
+									<div class="ml-2 leading-tight"><a href="#">Company Name - Lorem ipsum dolor sit amet.</a></div>
+								</div>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<span>Location</span>
+								<p class="text-xs font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<span>Featured</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="shadow rounded-md p-3 mt-5 transition duration-500 ease-in-out hover:shadow-md bg-yellow-200">
+						<div class=" flex flex-wrap -mx-3">
+							<div class="w-2/5 px-3 font-medium">
+								<h4 class="text-blue-500">
+									<a href="#" class="hover:underline">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+								</h4>
+								<ul>
+									<li class="flex items-center text-sm">
+										<span class="inline-block w-4 h-4 bg-green-500 rounded-full"></span>
+										<span class="inline-block ml-1">2 to 4 years</span>
+									</li>
+									
+								</ul>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<div class="flex items-start">
+									<div>
+										<div class="bg-green-400 text-white rounded-full mt-1">
+											<svg fill="currentColor" viewBox="0 0 20 20" class="w-4 h-4"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+										</div>
+									</div>
+									<div class="ml-2 leading-tight"><a href="#">Company Name - Lorem ipsum dolor sit amet.</a></div>
+								</div>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<span>Location</span>
+								<p class="text-xs font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<span>Featured</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="shadow rounded-md p-3 mt-5 transition duration-500 ease-in-out hover:shadow-md bg-white">
+						<div class=" flex flex-wrap -mx-3">
+							<div class="w-2/5 px-3 font-medium">
+								<h4 class="text-blue-500">
+									<a href="#" class="hover:underline">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+								</h4>
+								<ul>
+									<li class="flex items-center text-sm">
+										<span class="inline-block w-4 h-4 bg-pink-500 rounded-full"></span>
+										<span class="inline-block ml-1">1 year or less</span>
+									</li>
+									
+								</ul>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<div class="flex items-start">
+									<div>
+										<div class="bg-green-400 text-white rounded-full mt-1">
+											<svg fill="currentColor" viewBox="0 0 20 20" class="w-4 h-4"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+										</div>
+									</div>
+									<div class="ml-2 leading-tight"><a href="#">Company Name - Lorem ipsum dolor sit amet.</a></div>
+								</div>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<span>Location</span>
+								<p class="text-xs font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<span>Featured</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="shadow rounded-md p-3 mt-5 transition duration-500 ease-in-out hover:shadow-md bg-white">
+						<div class=" flex flex-wrap -mx-3">
+							<div class="w-2/5 px-3 font-medium">
+								<h4 class="text-blue-500">
+									<a href="#" class="hover:underline">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+								</h4>
+								<ul>
+									<li class="flex items-center text-sm">
+										<span class="inline-block w-4 h-4 bg-teal-500 rounded-full"></span>
+										<span class="inline-block ml-1">No Experience</span>
+									</li>
+								</ul>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<div class="flex items-start">
+									<div>
+										<div class="bg-green-400 text-white rounded-full mt-1">
+											<svg fill="currentColor" viewBox="0 0 20 20" class="w-4 h-4"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+										</div>
+									</div>
+									<div class="ml-2 leading-tight"><a href="#">Company Name - Lorem ipsum dolor sit amet.</a></div>
+								</div>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<span>Location</span>
+								<p class="text-xs font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<span>Featured</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="shadow rounded-md p-3 mt-5 transition duration-500 ease-in-out hover:shadow-md bg-white">
+						<div class=" flex flex-wrap -mx-3">
+							<div class="w-2/5 px-3 font-medium">
+								<h4 class="text-blue-500">
+									<a href="#" class="hover:underline">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+								</h4>
+								<ul>
+									<li class="flex items-center text-sm">
+										<span class="inline-block w-4 h-4 bg-orange-500 rounded-full"></span>
+										<span class="inline-block ml-1">No Experience</span>
+									</li>
+									<li class="flex items-center text-sm">
+										<span class="inline-block w-4 h-4 bg-yellow-500 rounded-full"></span>
+										<span class="inline-block ml-1">High School</span>
+									</li>
+									
+								</ul>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<div class="flex items-start">
+									<div>
+										<div class="bg-green-400 text-white rounded-full mt-1">
+											<svg fill="currentColor" viewBox="0 0 20 20" class="w-4 h-4"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+										</div>
+									</div>
+									<div class="ml-2 leading-tight"><a href="#">Company Name - Lorem ipsum dolor sit amet.</a></div>
+								</div>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<span>Location</span>
+								<p class="text-xs font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<span>Featured</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="shadow rounded-md p-3 mt-5 transition duration-500 ease-in-out hover:shadow-md bg-white">
+						<div class=" flex flex-wrap -mx-3">
+							<div class="w-2/5 px-3 font-medium">
+								<h4 class="text-blue-500">
+									<a href="#" class="hover:underline">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+								</h4>
+								<ul>
+									<li class="flex items-center text-sm">
+										<span class="inline-block w-4 h-4 bg-orange-500 rounded-full"></span>
+										<span class="inline-block ml-1">No Experience</span>
+									</li>
+									<li class="flex items-center text-sm">
+										<span class="inline-block w-4 h-4 bg-yellow-500 rounded-full"></span>
+										<span class="inline-block ml-1">High School</span>
+									</li>
+									
+								</ul>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<div class="flex items-start">
+									<div>
+										<div class="bg-green-400 text-white rounded-full mt-1">
+											<svg fill="currentColor" viewBox="0 0 20 20" class="w-4 h-4"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+										</div>
+									</div>
+									<div class="ml-2 leading-tight"><a href="#">Company Name - Lorem ipsum dolor sit amet.</a></div>
+								</div>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<span>Location</span>
+								<p class="text-xs font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="w-1/5 px-3 font-medium">
+								<span>Featured</span>
+							</div>
+						</div>
+					</div>
+
+					
+					
+				</div>
+
+				<div class="flex items-center mt-5">
+
+					<div class="ml-auto flex items-center">
+						<span class="text-sm">Showing 1 - 50 of 1555</span>
+						<ul class="flex ml-3">
+							<li class="border-l border-gray-800 px-3 py-1 bg-gray-200"><a href="#">1</a></li>
+							<li class="border-l border-gray-800 px-3 py-1 hover:bg-gray-200"><a href="#">2</a></li>
+							<li class="border-l border-gray-800 px-3 py-1 hover:bg-gray-200"><a href="#">3</a></li>
+							<li class="border-l border-gray-800 px-3 py-1 hover:bg-gray-200"><a href="#">4</a></li>
+							<li class="border-l border-gray-800 px-3 py-1 hover:bg-gray-200"><a href="#">5</a></li>
+							<li class="border-l border-gray-800 px-2 py-1 hover:bg-gray-200">
+								<a href="#"><svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-gray-800"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+	</main>
+
+
+	<footer class="bg-gray-100 -mx-10 mt-40 -mb-10">
+
+		<div class="flex flex-wrap py-16 px-20 border-b border-gray-500 mx-10">
+			
+			<div class="w-3/4 flex flex-wrap">
+				<div class="w-1/3">
+					<h3 class="text-gray-700 font-bold capitalize mb-5">menu title</h3>
+					<ul>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+					</ul>
+				</div>
+				<div class="w-1/3">
+					<h3 class="text-gray-700 font-bold capitalize mb-5">menu title</h3>
+					<ul>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+					</ul>
+				</div>
+				<div class="w-1/3">
+					<h3 class="text-gray-700 font-bold capitalize mb-5">menu title</h3>
+					<ul>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+						<li><a href="#" class="text-blue-500 text-sm hover:underline">menu item</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="w-1/4">
+				<img src="images/main-logo.svg" alt="mynimo" title="mynimo" class="w-64 mb-5">
+				<p class="mb-5 text-sm">Mynimo is committed to connecting job seekers and employers fast by keeping features super simple.</p>
+
+				<p class="mb-5 text-sm">© 2020 Mynimo, Inc.</p>
+
+				<p class="mb-5 text-sm">Get our Mobile App!</p>
+
+				<div>
+					<a href="#" class="inline-block"><img src="images/playstore.png" alt=""></a>
+					<a href="#" class="inline-block"><img src="images/appstore.png" alt=""></a>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="flex justify-between px-10 py-3">
+			<p class="text-sm font-medium text-gray-600">Mynimo Inc.</p>
+			<ul class="flex">
+				<li class="ml-2 text-gray-600"><a href="#"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a></li>
+				<li class="ml-2 text-gray-600"><a href="#"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a></li>
+			</ul>
+		</div>
+
+
+		
+	</footer>
+
+
+</body>
+</html>
