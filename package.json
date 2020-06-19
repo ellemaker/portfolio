@@ -1,0 +1,31 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "my portfolio",
+  "main": "postcss.config.js",
+  "dependencies": {
+    "autoprefixer": "^9.8.0",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.4.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss css/tailwind.css -o public/build/tailwind.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ellemaker/portfolio.git"
+  },
+  "keywords": [
+    "elle",
+    "zoilo",
+    "barde"
+  ],
+  "author": "elle zoilo barde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ellemaker/portfolio/issues"
+  },
+  "homepage": "https://github.com/ellemaker/portfolio#readme"
+}

@@ -8,84 +8,126 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-	<link rel="manifest" href="site.webmanifest">
-	<link rel="stylesheet" href="activities/assets/reset.css">
-	<link rel="stylesheet" href="styles/main.css">
 
-	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-N3S8HCW');</script>
-	<!-- End Google Tag Manager -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-64035898-3"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+	<link rel="stylesheet" href="public/build/tailwind.css">
 
-	  gtag('config', 'UA-64035898-3');
-	</script>
+	<script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+	<script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
 </head>
-<body>
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3S8HCW"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
+<body class="font-fira text-gray-800 bg-gray-100">
+
+
 	
 
-	<main>
-		<div class="logo">
-			<!-- <img src="android-chrome-192x192.png" alt="elle zoilo" title="elle zoilo"> -->
-			<img src="apple-touch-icon.png" alt="elle zoilo" title="elle zoilo">
-		</div>
+	<main class="container mx-auto mt-20">
+		<h1 class="text-center text-4xl text-indigo-700">elle<span class="bg-indigo-700 text-white"> zoilo</span>.</h1>
+
+
+		<nav class="mx-5">
+			<ul class="flex items-center justify-between w-full sm:w-3/4 lg:w-1/2 mx-auto mt-10">
+				<li class="font-bold px-5 py-2"><a href="about.html">About Me</a></li>
+				<li class="font-bold px-5 py-2 text-white bg-indigo-700 rounded-full"><a href="#">For Fun</a></li>
+				<li class="font-bold px-5 py-2"><a href="resources.html">Resources</a></li>
+			</ul>
+		</nav>
+
 		
-		<h1>elle<span> zoilo</span>.</h1>
-		
-		<h2>Project</h2>
-		<div class="section">
-			<h3>HTML Template</h3>
-			<div class="item"><a href="html-template/index.html">Build Now</a></div>
-		</div>
-		<h2>Activities</h2>
-		<div class="section">
-			<h3>Rebuilding</h3>
-			<div class="item">
-				<h4><span class="bg-orange">Mynimo </span>with TailwindCSS</h4>
-				<a href="rebuilding/mynimo/index.html">Index Page</a>
-				<a href="rebuilding/mynimo/listing.html">Lists Page</a>
-				<a href="rebuilding/mynimo/detailed.html">Detailed Page</a>
-			</div>
+		<div class="flex mt-20 sm:-mx-3 flex-wrap" x-data="blog()">
+
+			<template x-for="post in bloglist">
+			    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3 mb-10">
+					<div class="rounded-lg shadow-md overflow-hidden h-full relative bg-white ">
+						<div class="card-header relative overflow-hidden">
+							<img x-bind:src="post.image" alt="frontend-mentor-activity-1" class="transform hover:scale-125 transition duration-500 ease-in-out">
+							<span class="text-white bg-gray-800 px-3 opacity-75 text-sm mr-3 mb-3 absolute bottom-0 right-0" x-text="post.type">practice</span>
+						</div>
+						<div class="px-3 pt-5 pb-16">
+							<h2 class="font-bold mb-3" x-text="post.title"></h2>
+							<p class="text-sm" x-text="post.description"></p>
+							<div class="absolute bottom-0 right-0 mr-3 mb-5">
+								<a x-bind:href="post.link" class="bg-indigo-700 text-white py-2 px-5 text-sm uppercase rounded-full hover:bg-indigo-600">preview</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</template>
 			
-		</div>
-		<div class="section">
-			<h3>Frontend Mentor</h3>
-			<p>github repository: <a href="https://github.com/ellemaker/portfolio/tree/master/activities" target="_blank">here</a></p>
-			<div class="card">
-				<ul>
-					<li>
-						<a target="_blank" href="activities/part-1/index.html">[Part 1] - Single price grid component <strong class="text-green">(done)</strong></a>
-					</li>
-					<li><a target="_blank" href="activities/part-2/index.html">[Part 2] - Four card feature section <strong class="text-green">(done)</strong></a></li>
-					<li><a target="_blank" href="activities/part-3/index.html">[Part 3] - Huddle landing page with a single introductory section <strong class="text-green">(done)</strong></a></li>
-					<li><a target="_blank" href="activities/part-4/index.html">[Part 4] - Base Apparel coming soon page <strong class="text-green">(done)</strong></a></li>
-					<li><a target="_blank" href="activities/part-5/index.html">[Part 5] - Intro component with sign-up form <strong class="text-green">(done)</strong></a></li>
-					<li><a target="_blank" href="activities/part-6/index.html">[Part 6] - Pricing component with toggle <strong class="text-green">(done)</strong></a></li>
-					<li><a target="_blank" href="activities/part-7/index.html">[Part 7] - Insure landing page <strong class="text-green">(done)</strong></a></li>
-					<li><a target="_blank" href="activities/part-8/index.html">[Part 8] - Fylo dark theme landing page <strong class="text-yellow">(in progress)</strong></a></li>
-					<li><a target="_blank" href="javascript:;">[Part 9] - URL shortening API landing page <strong class="text-red">(pending)</strong></a></li>
-					<li><a target="_blank" href="javascript:;">[Part 10] - Manage landing page <strong class="text-red">(pending)</strong></a></li>
-					<li><a target="_blank" href="javascript:;">[Part 11] - Bookmark landing page <strong class="text-red">(pending)</strong></a></li>
-					<li><a target="_blank" href="javascript:;">[Part 12] - Job listings with filtering <strong class="text-red">(pending)</strong></a></li>
-					<li><a target="_blank" href="javascript:;">[Part 13] - Rock, Paper, Scissors game <strong class="text-red">(pending)</strong></a></li>
-				</ul>
-			</div>
 		</div>
 		
 		
 	</main>
+
+
+	<footer class="mt-24 py-10 bg-indigo-700 text-white">
+		<div class="container mx-auto">
+			<h3>Social Media</h3>
+			<ul>
+				<li>facebook</li>
+				<li>email</li>
+				<li>github</li>
+			</ul>
+		</div>
+	</footer>
+
+
+	<script>
+	    function blog() {
+	        return {
+	            bloglist : [
+	            	{ 
+	            		title: 'Single price grid component',
+	            		description: "This project presents some nice layout challenges. It's a great opportunity to practice Flexbox or CSS Grid. You'll also get the basics of building a responsive component.",
+	            		image : 'images/frontend-mentor-activity-1.jpg',
+	            		type: 'practice',
+	            		link: 'activities/part-1/index.html',
+	            	},
+	            	{ 
+	            		title: 'Four card feature section',
+	            		description: "This project presents some nice layout challenges. It's a great opportunity to practice Flexbox or CSS Grid. You'll also get the basics of building a responsive component.",
+	            		image : 'images/frontend-mentor-activity-2.jpg',
+	            		type: 'practice',
+	            		link: 'activities/part-2/index.html',
+	            	},
+	            	{ 
+	            		title: 'Huddle landing page with a single introductory section',
+	            		description: "Think about positioning images and content next to one another. Scaling the content down to mobile without it looking too squashed will be a challenge as well.",
+	            		image : 'images/frontend-mentor-activity-3.jpg',
+	            		type: 'practice',
+	            		link: 'activities/part-3/index.html',
+	            	},
+	            	{ 
+	            		title: 'Base Apparel coming soon page',
+	            		description: "Learn how to do basic form validation on a single field. This project will also take a bit of layout planning, so be sure to take some time, in the beginning, to think it through.",
+	            		image : 'images/frontend-mentor-activity-4.jpg',
+	            		type: 'practice',
+	            		link: 'activities/part-4/index.html',
+	            	},
+	            	{ 
+	            		title: 'Intro component with sign-up form',
+	            		description: "The main learning outcome here will be how to write reusable JavaScript code to check the validity of the different form fields.",
+	            		image : 'images/frontend-mentor-activity-5.jpg',
+	            		type: 'practice',
+	            		link: 'activities/part-5/index.html',
+	            	},
+	            	{ 
+	            		title: 'Pricing component with toggle',
+	            		description: "The perfect markup to be able to make use of pseudo-classes and sibling selectors for the toggle.",
+	            		image : 'images/frontend-mentor-activity-6.jpg',
+	            		type: 'practice',
+	            		link: 'activities/part-6/index.html',
+	            	},
+	            	{ 
+	            		title: 'Insure landing page',
+	            		description: "There's only a tiny bit of JavaScript for this challenge with the mobile navigation toggle. But it will be the first time that you're building a multi-section landing page on this track.",
+	            		image : 'images/frontend-mentor-activity-7.jpg',
+	            		type: 'practice',
+	            		link: 'activities/part-7/index.html',
+	            	}
+	            	
+	            ].reverse()
+	        }
+	    }
+	</script>
 
 
 </body>

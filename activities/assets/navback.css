@@ -1,0 +1,17 @@
+.nav-back{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding:15px 30px;
+	background-color: #4c51bf;
+}
+
+.nav-back a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.nav-back a:hover{
+	text-decoration: underline;
+}
